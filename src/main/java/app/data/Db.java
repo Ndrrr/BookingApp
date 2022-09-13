@@ -1,6 +1,6 @@
-package dao;
+package app.data;
 
-import entity.Entity;
+import app.data.entity.Entity;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,14 +8,23 @@ import java.util.List;
 import java.util.Optional;
 
 public class Db {
-    public static void save(List<? extends Entity> entities, String path){
+    private static Db instance;
+    private Db(){}
+    public static Db getInstance(){
+        if(instance == null){
+            instance = new Db();
+        }
+        return instance;
+    }
+
+    public void save(List<? extends Entity> entities, String path){
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(path))) {
             oos.writeObject(entities);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    public static Optional<List<Entity>> load(String path){
+    public Optional<List<Entity>> load(String path){
         File file = new File(path);
         try (ObjectInputStream reader = new ObjectInputStream(new FileInputStream(file))) {
             Object obj = reader.readObject();

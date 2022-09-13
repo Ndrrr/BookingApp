@@ -1,12 +1,16 @@
-package entity;
+package app.data.entity;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class Flight extends Entity{
+public class Flight extends Entity implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
     private static int idCounter = 0;
     private String flightDesignation;
@@ -31,7 +35,7 @@ public class Flight extends Entity{
         this.passengerList = passengerList;
     }
 
-    public Flight(String flightDesignation, int id, Airport airportFrom,
+    public Flight(int id, String flightDesignation, Airport airportFrom,
                   Airport airportTo, Airline airline, LocalDateTime dateTime,
                   Duration duration, int seats, Set<Passenger> passengerList) {
         super(id);
@@ -63,6 +67,9 @@ public class Flight extends Entity{
 
     public Duration getDuration() {
         return duration;
+    }
+    public String getFormattedTime() {
+        return dateTime.format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
     }
 
     public int getSeats() {
@@ -114,6 +121,11 @@ public class Flight extends Entity{
     public void removePassenger(Passenger passenger){
         if(passengerList == null) return;
         passengerList.remove(passenger);
+    }
+    public String prettyFormat(){
+        return String.format("| %3.3s | %5.5s | %16.16s | %30.30s ----> %30.30s | %20.20s | %3.3s |",
+                getId(), flightDesignation, getFormattedTime(), airportFrom.getLocation(),
+                airportTo.getLocation(), airline.getName(),  seats);
     }
 
     @Override

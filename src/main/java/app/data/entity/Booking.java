@@ -1,9 +1,11 @@
-package entity;
+package app.data.entity;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.List;
 
 public class Booking extends Entity implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
     private static int idCounter = 0;
     private Flight flight;

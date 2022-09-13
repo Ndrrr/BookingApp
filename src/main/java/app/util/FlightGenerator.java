@@ -1,8 +1,8 @@
-package util;
+package app.util;
 
-import entity.Airline;
-import entity.Airport;
-import entity.Flight;
+import app.data.entity.Airline;
+import app.data.entity.Airport;
+import app.data.entity.Flight;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -20,7 +20,7 @@ public class FlightGenerator {
         while (from.equals(to)){
             to = Airport.values()[rand.nextInt(Airport.values().length)];
         }
-        String flightDesignation = airline.name() + rand.nextInt(1000);
+        String flightDesignation = airline.name() + rand.nextInt(100,1000);
         LocalDateTime dateTime = LocalDateTime.now().plusDays(rand.nextInt(30));
         Duration duration = Duration.ofHours(rand.nextInt(10));
         int seats = rand.nextInt(100);

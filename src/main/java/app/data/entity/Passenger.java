@@ -1,8 +1,12 @@
-package entity;
+package app.data.entity;
 
-public class Passenger extends Entity{
+import java.io.Serial;
+import java.io.Serializable;
+
+public class Passenger implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
-    private static int idCounter = 0;
+    //private static int idCounter = 0;
     private String firstName;
     private String lastName;
 
@@ -34,10 +38,5 @@ public class Passenger extends Entity{
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
-    }
-
-    @Override
-    protected int getIdCounter() {
-        return idCounter++;
     }
 }

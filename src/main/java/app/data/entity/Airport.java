@@ -1,4 +1,4 @@
-package entity;
+package app.data.entity;
 
 public enum Airport {
     JFK("John F. Kennedy International Airport", "New York", "United States"),
@@ -40,5 +40,8 @@ public enum Airport {
     }
     public String getCountry() {
         return country;
+    }
+    public String getLocation(){
+        return city + ", " + country;
     }
 }

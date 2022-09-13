@@ -5,26 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5f8e07b-0d00-4d54-bc7a-d482066041f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/BookingDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/Db.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FlightDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Airline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Airport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Booking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Flight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/Passenger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/FlightGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Context.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/EmptyCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/LoginCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/RegisterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/FlightController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/exception/ValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/FlightService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/console/Console.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/console/ProdConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/console/TestConsole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/ExitMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/FlightInfoMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/LoginMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItemStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/RegisterMenuItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/util/InputUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/BookingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/BookingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/Db.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/FlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/FlightDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Airline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Airline.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/FlightGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/util/FlightGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +53,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -63,8 +82,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="app.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="BookingApp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -72,7 +91,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.app.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -85,7 +104,9 @@
       <option name="presentableId" value="Default" />
       <updated>1662793469197</updated>
       <workItem from="1662793470985" duration="9572000" />
-      <workItem from="1662877726106" duration="4174000" />
+      <workItem from="1662877726106" duration="6503000" />
+      <workItem from="1662962121977" duration="7391000" />
+      <workItem from="1663071001069" duration="16070000" />
     </task>
     <servers />
   </component>

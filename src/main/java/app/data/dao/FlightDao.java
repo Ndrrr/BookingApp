@@ -1,13 +1,14 @@
-package dao;
+package app.data.dao;
 
-import entity.Entity;
-import entity.Flight;
-import util.FlightGenerator;
+import app.data.Db;
+import app.data.entity.Entity;
+import app.data.entity.Flight;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class FlightDao implements Dao<Flight>{
+    private static final Db db = Db.getInstance();
     private static final String path = "flights.txt";
     List<Flight> flightList;
 
@@ -25,12 +26,12 @@ public class FlightDao implements Dao<Flight>{
 
     @Override
     public void save() {
-        Db.save(flightList, path);
+        db.save(flightList, path);
     }
 
     @Override
     public void load() {
-        List<Entity> list = Db.load(path).orElse(new ArrayList<Entity>());
+        List<Entity> list = db.load(path).orElse(new ArrayList<Entity>());
         boolean match = list.stream()
                 .allMatch(e -> e instanceof Flight);
         if(match){

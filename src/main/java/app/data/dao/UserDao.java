@@ -1,12 +1,14 @@
-package dao;
+package app.data.dao;
 
-import entity.Entity;
-import entity.User;
+import app.data.Db;
+import app.data.entity.Entity;
+import app.data.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao implements Dao<User>{
+    private static final Db db = Db.getInstance();
     private static final String path = "users.txt";
     List<User> userList;
     public UserDao(){
@@ -22,12 +24,12 @@ public class UserDao implements Dao<User>{
     }
     @Override
     public void save() {
-        Db.save(userList, path);
+        db.save(userList, path);
     }
 
     @Override
     public void load() {
-        List<Entity> list = Db.load(path).orElse(new ArrayList<Entity>());
+        List<Entity> list = db.load(path).orElse(new ArrayList<Entity>());
         boolean match = list.stream()
                 .allMatch(e -> e instanceof User);
         if(match){

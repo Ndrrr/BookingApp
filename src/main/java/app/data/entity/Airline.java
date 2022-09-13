@@ -1,4 +1,4 @@
-package entity;
+package app.data.entity;
 
 public enum Airline{
     QR("Qatar Airways"),
