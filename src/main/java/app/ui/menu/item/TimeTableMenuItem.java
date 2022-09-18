@@ -7,10 +7,11 @@ import app.data.entity.Flight;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class TimeTableMenuItem extends MenuItem {
     private Console console;
-    FlightController flightController;
+    private FlightController flightController;
     public TimeTableMenuItem(int id, Console console, FlightController flightController){
         super(id, new EmptyCommand());
         this.flightController = flightController;
@@ -26,9 +27,11 @@ public class TimeTableMenuItem extends MenuItem {
     }
 
     @Override
-    protected MenuItemStatus response() {
-        List<Flight> flights = flightController.getFlights();
+    protected MenuItemStatus response(Map <String, String> data) {
+        List<Flight> flights = flightController.getFlights().stream().sorted().toList();
+        console.println(console.lineSeparator());
         flights.forEach(flight -> console.println(flight.prettyFormat()));
-        return MenuItemStatus.CONTINUE;
+        console.waitForEnter();
+        return MenuItemStatus.NEXT;
     }
 }

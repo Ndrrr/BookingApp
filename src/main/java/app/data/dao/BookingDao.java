@@ -9,8 +9,8 @@ import java.util.List;
 
 public class BookingDao implements Dao<Booking> {
     private static final Db db = Db.getInstance();
-    private final String path = "bookings.txt";
-    List<Booking> bookingList;
+    private final String path = "bookings.bin";
+    private List<Booking> bookingList;
     public BookingDao(){
         bookingList = new ArrayList<>();
     }

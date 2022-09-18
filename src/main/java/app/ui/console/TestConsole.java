@@ -20,4 +20,19 @@ public class TestConsole implements Console{
     public String next() {
         return null;
     }
+
+    @Override
+    public void waitForEnter() {
+
+    }
+
+    @Override
+    public String lineSeparator() {
+        return null;
+    }
+
+    @Override
+    public String bigLineSeparator() {
+        return null;
+    }
 }

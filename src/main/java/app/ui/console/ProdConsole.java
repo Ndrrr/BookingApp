@@ -20,4 +20,20 @@ public class ProdConsole implements Console{
     }
     @Override
     public String next(){return sc.next();}
+    @Override
+    public void waitForEnter() {
+        bigLineSeparator();
+        System.out.println("Press enter to continue...");
+        sc.nextLine();
+    }
+
+    @Override
+    public String bigLineSeparator() {
+        return "=============================================================\n";
+    }
+
+    @Override
+    public String lineSeparator() {
+        return "------------------------------------------------------\n";
+    }
 }

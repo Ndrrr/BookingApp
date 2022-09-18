@@ -2,8 +2,10 @@ package app.service;
 
 import app.data.dao.FlightDao;
 import app.data.entity.Flight;
+import app.data.entity.Passenger;
 
 import java.util.List;
+import java.util.Optional;
 
 public class FlightService {
     private final FlightDao flightDao;
@@ -23,8 +25,12 @@ public class FlightService {
     public void updateFlight(int id, Flight flight){
         flightDao.update(id, flight);
     }
-    public Flight getFlight(int id){
-        return flightDao.get(id).orElse(null);
+    public Optional<Flight> getFlight(int id){
+        return flightDao.get(id);
+    }
+    public Optional<Flight> getFlightByDesignation(String designation){
+
+        return flightDao.getFlightByDesignation(designation);
     }
     public List<Flight> getFlights(){
         return flightDao.get();
@@ -35,5 +41,11 @@ public class FlightService {
     public void loadFromDb(){
         flightDao.load();
     }
+    public void addPassengerToFlight(Flight flight, List<Passenger> passengerList){
+        flight.getPassengerList().addAll(passengerList);
+        updateFlight(flight.getId(), flight);
+    }
+
+
 
 }

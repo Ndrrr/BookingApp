@@ -5,4 +5,7 @@ public interface Console {
     void println(String message);
     String nextLine();
     String next();
+    void waitForEnter();
+    String lineSeparator();
+    String bigLineSeparator();
 }

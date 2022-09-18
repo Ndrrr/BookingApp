@@ -1,9 +1,9 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.Command;
 import app.command.EmptyCommand;
 import app.ui.console.Console;
+import app.util.InputUtil;
 
 import java.util.Map;
 
@@ -22,9 +22,8 @@ public class ExitMenuItem extends MenuItem {
 
     @Override
     protected Map<String, String> getInput() {
-        console.println("Do you want to save data before leaving?[y/*]");
-        String answer = console.nextLine().toLowerCase();
-        if (answer.equals("y")) {
+        boolean userResp = InputUtil.askYesNo("Do you want to save before exit?");
+        if (userResp) {
             Context.getInstance().saveApp();
             console.println("Data saved successfully");
         }else {
@@ -34,8 +33,8 @@ public class ExitMenuItem extends MenuItem {
     }
 
     @Override
-    protected MenuItemStatus response() {
+    protected MenuItemStatus response(Map <String, String> data) {
         System.exit(0);
-        return MenuItemStatus.CONTINUE;
+        return MenuItemStatus.NEXT;
     }
 }

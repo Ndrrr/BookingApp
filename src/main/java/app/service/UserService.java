@@ -1,9 +1,11 @@
 package app.service;
 
 import app.data.dao.UserDao;
+import app.data.entity.Booking;
 import app.data.entity.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public class UserService {
     private final UserDao userDao;
@@ -24,8 +26,11 @@ public class UserService {
     public void updateUser(int id, User user){
         userDao.update(id, user);
     }
-    public User getUser(int id){
-        return userDao.get(id).orElse(null);
+    public Optional<User> getUser(int id){
+        return userDao.get(id);
+    }
+    public Optional<User> getUserByUsername(String username){
+        return userDao.getUserByUsername(username);
     }
     public List<User> getUsers(){
         return userDao.get();
@@ -47,5 +52,9 @@ public class UserService {
         }
         userDao.add(new User(username, password));
         return true;
+    }
+    public void addBookingToUser(User user, Booking booking){
+        user.getBookingList().add(booking);
+        updateUser(user.getId(), user);
     }
 }

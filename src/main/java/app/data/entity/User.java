@@ -1,5 +1,7 @@
 package app.data.entity;
 
+import app.Config;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ import java.util.List;
 public class User extends Entity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-    private static int idCounter = 0;
+    private static int idCounter = Config.getInstance().getLastFlightID();
     private String username;
     private String password;
     private List<Booking> bookingList;
@@ -41,6 +43,20 @@ public class User extends Entity implements Serializable {
         this.password = password;
     }
 
+    public List<Booking> getBookingList() {
+        return bookingList;
+    }
+    public boolean removeBooking(Booking booking){
+        return bookingList.remove(booking);
+    }
+    public void addBooking(Booking booking){
+        bookingList.add(booking);
+    }
+
+    public void setBookingList(List<Booking> bookingList) {
+        this.bookingList = bookingList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -52,6 +68,7 @@ public class User extends Entity implements Serializable {
 
     @Override
     protected int getIdCounter() {
+        Config.getInstance().setLastUserID(idCounter + 1);
         return idCounter++;
     }
 }

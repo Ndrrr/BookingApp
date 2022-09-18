@@ -3,5 +3,5 @@ package app.command;
 import java.util.Map;
 
 public interface Command {
-    boolean execute(Map<String, String> data);
+    void execute(Map<String, String> data);
 }

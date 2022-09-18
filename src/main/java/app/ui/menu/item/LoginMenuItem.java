@@ -1,7 +1,7 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.Command;
+import app.command.LoginCommand;
 import app.ui.console.Console;
 
 import java.util.HashMap;
@@ -11,8 +11,8 @@ import java.util.Objects;
 public class LoginMenuItem extends MenuItem {
     private final Console console;
     private final Context context = Context.getInstance();
-    public LoginMenuItem(int id, Console console, Command command) {
-        super(id, command);
+    public LoginMenuItem(int id, Console console) {
+        super(id, new LoginCommand());
         this.console = console;
     }
     @Override
@@ -32,10 +32,12 @@ public class LoginMenuItem extends MenuItem {
     }
 
     @Override
-    protected MenuItemStatus response() {
+    protected MenuItemStatus response(Map <String, String> data) {
         String errorMsg = context.getErrorMessage();
+        console.println(console.lineSeparator());
         console.println(Objects.requireNonNullElse(errorMsg, "Logged in successfully"));
-        return MenuItemStatus.CONTINUE;
+        console.waitForEnter();
+        return MenuItemStatus.NEXT;
     }
 
 }

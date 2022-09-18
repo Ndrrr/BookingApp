@@ -1,5 +1,7 @@
 package app.data.entity;
 
+import app.Config;
+
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.Duration;
@@ -9,10 +11,10 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-public class Flight extends Entity implements Serializable {
+public class Flight extends Entity implements Serializable, Comparable<Flight> {
     @Serial
     private static final long serialVersionUID = 1L;
-    private static int idCounter = 0;
+    private static int idCounter = Config.getInstance().getLastFlightID();
     private String flightDesignation;
     private Airport airportFrom;
     private Airport airportTo;
@@ -35,6 +37,11 @@ public class Flight extends Entity implements Serializable {
         this.passengerList = passengerList;
     }
 
+    public Flight(String flightDesignation, Airport airportFrom, Airport airportTo,
+                  Airline airline, LocalDateTime dateTime, Duration duration, int seats) {
+        this(flightDesignation, airportFrom, airportTo, airline, dateTime, duration, seats, new HashSet<>());
+
+    }
     public Flight(int id, String flightDesignation, Airport airportFrom,
                   Airport airportTo, Airline airline, LocalDateTime dateTime,
                   Duration duration, int seats, Set<Passenger> passengerList) {
@@ -47,6 +54,11 @@ public class Flight extends Entity implements Serializable {
         this.duration = duration;
         this.seats = seats;
         this.passengerList = passengerList;
+    }
+    public Flight(int id, String flightDesignation, Airport airportFrom,
+                  Airport airportTo, Airline airline, LocalDateTime dateTime,
+                  Duration duration, int seats) {
+        this(id, flightDesignation, airportFrom, airportTo, airline, dateTime, duration, seats, new HashSet<>());
     }
 
     public Airport getAirportFrom() {
@@ -80,6 +92,10 @@ public class Flight extends Entity implements Serializable {
     }
     public Set<Passenger> getPassengerList() {
         return passengerList;
+    }
+    public int getAvailableSeats(){
+        if(passengerList == null) return seats;
+        return seats - passengerList.size();
     }
 
     public void setFlightDesignation(String flightDesignation) {
@@ -157,6 +173,12 @@ public class Flight extends Entity implements Serializable {
 
     @Override
     protected int getIdCounter(){
+        Config.getInstance().setLastFlightID(idCounter + 1);
         return idCounter++;
+    }
+
+    @Override
+    public int compareTo(Flight o) {
+        return this.getDateTime().compareTo(o.getDateTime());
     }
 }

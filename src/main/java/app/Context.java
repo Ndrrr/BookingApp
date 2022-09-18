@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class Context {
     private static Context instance;
-    private Map<String, Object> data;
+    private final Map<String, Object> data;
     private Context() {
         this.data = new HashMap<>();
         init();
@@ -43,17 +43,20 @@ public class Context {
         FlightController flightController = (FlightController) data.get("flightController");
         flightController.saveToDb();
         BookingController bookingController = (BookingController) data.get("bookingController");
-        //bookingController.saveToDb();
+        bookingController.saveToDb();
         UserController userController = (UserController) data.get("userController");
         userController.saveToDb();
+        Config.save();
+
     }
     public void loadApp(){
         FlightController flightController = (FlightController) data.get("flightController");
         flightController.loadFromDb();
         BookingController bookingController = (BookingController) data.get("bookingController");
-        //bookingController.loadFromDb();
+        bookingController.loadFromDb();
         UserController userController = (UserController) data.get("userController");
         userController.loadFromDb();
+        Config.load();
     }
     private void init(){
         data.put("currentUser", null);
@@ -64,6 +67,8 @@ public class Context {
         data.put("flightController", new FlightController((FlightService) data.get("flightService")));
         data.put("bookingController", new BookingController((BookingService) data.get("bookingService")));
         data.put("console", new ProdConsole());
+        data.put("autoSave", true);
+        loadApp();
     }
 
 

@@ -9,7 +9,7 @@ import java.util.Map;
 public class LoginCommand implements Command{
     Context context = Context.getInstance();
     @Override
-    public boolean execute(Map<String, String> data) {
+    public void execute(Map<String, String> data) {
         UserController userController = (UserController) context.get("userController");
         boolean success = userController.login(data.get("username"), data.get("password"));
         if(success){
@@ -17,6 +17,5 @@ public class LoginCommand implements Command{
         }else {
             context.put("errorMsg", "Invalid username or password");
         }
-        return success;
     }
 }

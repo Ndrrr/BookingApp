@@ -21,10 +21,10 @@ public class FlightGenerator {
             to = Airport.values()[rand.nextInt(Airport.values().length)];
         }
         String flightDesignation = airline.name() + rand.nextInt(100,1000);
-        LocalDateTime dateTime = LocalDateTime.now().plusDays(rand.nextInt(30));
+        LocalDateTime dateTime = LocalDateTime.now().plusDays(rand.nextInt(30)).plusHours(rand.nextInt(24)).plusMinutes(rand.nextInt(60));
         Duration duration = Duration.ofHours(rand.nextInt(10));
         int seats = rand.nextInt(100);
-        return new Flight(flightDesignation, from, to, airline, dateTime, duration, seats, null);
+        return new Flight(flightDesignation, from, to, airline, dateTime, duration, seats);
     }
 
     public List<Flight> generateFlights(int count){

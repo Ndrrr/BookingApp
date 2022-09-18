@@ -33,6 +33,10 @@ public class Db {
 
                 return Optional.of(new ArrayList<>((List<Entity>) obj));
             }
+        }catch (FileNotFoundException e){
+            // in first run files may not exist
+            // they will be created after proper exit
+            // therefore exception is ignored
         }catch (Exception e){
             e.printStackTrace();
         }

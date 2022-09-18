@@ -10,7 +10,7 @@ public class RegisterCommand implements Command{
 
 
     @Override
-    public boolean execute(Map<String, String> data) {
+    public void execute(Map<String, String> data) {
         UserController userController = (UserController) context.get("userController");
         String username = data.get("username");
         String password = data.get("password");
@@ -20,9 +20,7 @@ public class RegisterCommand implements Command{
             if(!success){
                 context.put("errorMsg", "Username already exists");
             }
-            return success;
         }
-        return false;
     }
 
     private boolean validatePassword(String password, String confirmPassword){

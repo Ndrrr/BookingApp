@@ -20,7 +20,8 @@ public enum Airport {
     CLT("Charlotte Douglas International Airport", "Charlotte", "United States"),
     GYD("Heydar Aliyev International Airport", "Baku", "Azerbaijan"),
     IST("Istanbul Ataturk Airport", "Istanbul", "Turkey"),
-    SAW("Istanbul Sabiha Gokcen Airport", "Istanbul", "Turkey");
+    SAW("Istanbul Sabiha Gokcen Airport", "Istanbul", "Turkey"),
+    KBP("Boryspil International Airport", "Kiev", "Ukraine"),;
 
     private final String name;
     private final String city;

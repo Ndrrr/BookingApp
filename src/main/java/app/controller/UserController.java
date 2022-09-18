@@ -1,7 +1,10 @@
 package app.controller;
 
+import app.data.entity.Booking;
 import app.data.entity.User;
 import app.service.UserService;
+
+import java.util.Optional;
 
 public class UserController {
     private final UserService userService;
@@ -22,8 +25,11 @@ public class UserController {
     public void updateUser(int id, User user){
         userService.updateUser(id, user);
     }
-    public User getUser(int id){
+    public Optional<User> getUser(int id){
         return userService.getUser(id);
+    }
+    public Optional<User> getUserByUsername(String username){
+        return userService.getUserByUsername(username);
     }
     public void saveToDb(){
         userService.saveToDb();
@@ -36,5 +42,8 @@ public class UserController {
     }
     public boolean register(String username, String password){
         return userService.register(username, password);
+    }
+    public void addBookingToUser(User user, Booking booking){
+        userService.addBookingToUser(user, booking);
     }
 }

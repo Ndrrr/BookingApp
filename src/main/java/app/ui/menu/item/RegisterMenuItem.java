@@ -1,7 +1,7 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.Command;
+import app.command.RegisterCommand;
 import app.ui.console.Console;
 
 import java.util.HashMap;
@@ -11,8 +11,8 @@ import java.util.Objects;
 public class RegisterMenuItem extends MenuItem {
     Console console;
     Context context = Context.getInstance();
-    public RegisterMenuItem(int id, Console console, Command command) {
-        super(id, command);
+    public RegisterMenuItem(int id, Console console) {
+        super(id, new RegisterCommand());
         this.console = console;
     }
 
@@ -37,14 +37,15 @@ public class RegisterMenuItem extends MenuItem {
     }
 
     @Override
-    protected MenuItemStatus response() {
+    protected MenuItemStatus response(Map <String, String> data) {
         String errorMsg = context.getErrorMessage();
+        console.println(console.lineSeparator());
+        console.println(Objects.requireNonNullElse( errorMsg, "Registered successfully"));
+        console.waitForEnter();
         if(errorMsg != null){
-            console.println(errorMsg);
             return MenuItemStatus.RESTART;
         }else{
-            console.println("Registered successfully");
-            return MenuItemStatus.CONTINUE;
+            return MenuItemStatus.NEXT;
         }
     }
 }

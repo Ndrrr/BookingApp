@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class EmptyCommand implements Command {
     @Override
-    public boolean execute(Map<String, String> data) {
-        return false;
+    public void execute(Map<String, String> data) {
+
     }
 }

@@ -2,8 +2,12 @@ package app.service;
 
 import app.data.dao.BookingDao;
 import app.data.entity.Booking;
+import app.data.entity.Flight;
+import app.data.entity.Passenger;
+import app.data.entity.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public class BookingService {
     private final BookingDao bookingDao;
@@ -24,8 +28,8 @@ public class BookingService {
     public void updateBooking(int id, Booking booking){
         bookingDao.update(id, booking);
     }
-    public Booking getBooking(int id){
-        return bookingDao.get(id).orElse(null);
+    public Optional<Booking> getBooking(int id){
+        return bookingDao.get(id);
     }
     public List<Booking> getBookings(){
         return bookingDao.get();
@@ -35,5 +39,16 @@ public class BookingService {
     }
     public void loadFromDb(){
         bookingDao.load();
+    }
+
+    public Booking makeBooking(User user, Flight flight, List<Passenger> passengerList){
+        Booking booking = new Booking(user, flight, passengerList);
+        addBooking(booking);
+        return booking;
+    }
+    public boolean cancelBooking(User user, Booking booking){
+        user.removeBooking(booking);
+        booking.setUser(null);
+        return true;
     }
 }
