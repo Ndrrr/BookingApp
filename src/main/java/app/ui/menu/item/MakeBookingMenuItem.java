@@ -1,11 +1,10 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.Command;
-import app.command.MakeBookingCommand;
-import app.command.SearchFlightsCommand;
+import app.ui.menu.command.Command;
+import app.ui.menu.command.MakeBookingCommand;
+import app.ui.menu.command.SearchFlightsCommand;
 import app.controller.FlightController;
-import app.data.entity.Airport;
 import app.data.entity.Flight;
 import app.ui.console.Console;
 import app.util.InputUtil;

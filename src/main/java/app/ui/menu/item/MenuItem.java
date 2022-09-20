@@ -1,6 +1,6 @@
 package app.ui.menu.item;
 
-import app.command.Command;
+import app.ui.menu.command.Command;
 
 import java.util.Map;
 

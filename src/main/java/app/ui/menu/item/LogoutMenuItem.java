@@ -1,12 +1,11 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.LogoutCommand;
+import app.ui.menu.command.LogoutCommand;
 import app.ui.console.Console;
 import app.util.InputUtil;
 
 import java.util.Map;
-import java.util.Objects;
 
 public class LogoutMenuItem extends MenuItem {
     private Context context = Context.getInstance();

@@ -1,14 +1,12 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.Command;
-import app.command.EmptyCommand;
+import app.ui.menu.command.EmptyCommand;
 import app.controller.UserController;
 import app.data.entity.User;
 import app.ui.console.Console;
 
 import java.util.Map;
-import java.util.Optional;
 
 public class ViewBookingMenuItem extends MenuItem{
     private final Console console;

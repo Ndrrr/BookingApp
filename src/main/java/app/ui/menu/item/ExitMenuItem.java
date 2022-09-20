@@ -1,7 +1,7 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.EmptyCommand;
+import app.ui.menu.command.EmptyCommand;
 import app.ui.console.Console;
 import app.util.InputUtil;
 

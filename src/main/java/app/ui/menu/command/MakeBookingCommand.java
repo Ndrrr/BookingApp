@@ -1,4 +1,4 @@
-package app.command;
+package app.ui.menu.command;
 
 import app.Context;
 import app.controller.BookingController;
@@ -6,11 +6,7 @@ import app.controller.FlightController;
 import app.controller.UserController;
 import app.data.entity.*;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class MakeBookingCommand implements Command {
     private final Context context = Context.getInstance();

@@ -1,7 +1,7 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.SearchFlightsCommand;
+import app.ui.menu.command.SearchFlightsCommand;
 import app.controller.FlightController;
 import app.data.entity.Flight;
 import app.ui.console.Console;

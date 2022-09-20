@@ -1,13 +1,12 @@
 package app.ui.menu.item;
 
-import app.command.EmptyCommand;
+import app.ui.menu.command.EmptyCommand;
 import app.ui.console.Console;
 import app.controller.FlightController;
 import app.data.entity.Flight;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class TimeTableMenuItem extends MenuItem {
     private Console console;

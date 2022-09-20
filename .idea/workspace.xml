@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5f8e07b-0d00-4d54-bc7a-d482066041f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/BookingServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Context.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/MakeBookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/MakeBookingCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" afterDir="false" />
-    </list>
+    <list default="true" id="c5f8e07b-0d00-4d54-bc7a-d482066041f3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +129,7 @@
       <workItem from="1663650113200" duration="539000" />
       <workItem from="1663662466467" duration="2179000" />
       <workItem from="1663668417115" duration="20000" />
-      <workItem from="1663690271349" duration="7845000" />
+      <workItem from="1663690271349" duration="8190000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,7 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.LoginCommand;
+import app.ui.menu.command.LoginCommand;
 import app.ui.console.Console;
 
 import java.util.HashMap;

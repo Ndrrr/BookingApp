@@ -1,8 +1,7 @@
 package app.ui.menu.item;
 
 import app.Context;
-import app.command.CancelBookingCommand;
-import app.command.Command;
+import app.ui.menu.command.CancelBookingCommand;
 import app.controller.UserController;
 import app.data.entity.Booking;
 import app.data.entity.User;

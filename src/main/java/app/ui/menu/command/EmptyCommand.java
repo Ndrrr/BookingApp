@@ -1,4 +1,4 @@
-package app.command;
+package app.ui.menu.command;
 
 import java.util.Map;
 
