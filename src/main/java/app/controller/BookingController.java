@@ -48,4 +48,8 @@ public class BookingController {
     public boolean cancelBooking(User user, Booking booking){
         return bookingService.cancelBooking(user, booking);
     }
+
+    public Optional<Booking> getBookingOfUserById(User user, int id){
+        return bookingService.getBookingOfUserById(user, id);
+    }
 }

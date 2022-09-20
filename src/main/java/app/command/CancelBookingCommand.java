@@ -20,8 +20,10 @@ public class CancelBookingCommand implements Command{
         }
         int bookingId = Integer.parseInt(bookingIdStr);
         BookingController bookingController= (BookingController) context.get("bookingController");
+        UserController userController = (UserController) context.get("userController");
         String username = (String)context.get("currentUser");
-        Optional<Booking> bookingOptional = bookingController.getBooking(bookingId);
+        Optional<User> user = userController.getUserByUsername(username);
+        Optional<Booking> bookingOptional = bookingController.getBookingOfUserById(user.get(), bookingId);
         Booking booking = null;
         if(bookingOptional.isPresent()) {
             booking = bookingOptional.get();

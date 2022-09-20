@@ -43,9 +43,10 @@ public class MakeBookingCommand implements Command {
         }
         if(user.isPresent()) {
             User bookingOwner = user.get();
-            Booking booking = bookingController.makeBooking(bookingOwner,flight, passengerList);
+            Booking booking = bookingController.makeBooking(bookingOwner, flight, passengerList);
+            //userController.addBookingToUser(bookingOwner, booking);  -- included inside previous function call (make booking)
+
             flightController.addPassengerToFlight(flight, passengerList);
-            userController.addBookingToUser(bookingOwner, booking);
         }
     }
 }

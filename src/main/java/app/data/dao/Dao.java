@@ -5,6 +5,8 @@ import app.data.entity.Flight;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public interface Dao<T extends Entity> {
     List<T> get();
@@ -21,10 +23,14 @@ public interface Dao<T extends Entity> {
     }
     default boolean update(int id, T t){
         List<T> entityList = get();
-        Entity item = entityList.stream()
-                .filter(e -> e.getId() == id)
-                .map(e -> t).findFirst().orElse(null);
-        return item != null;
+        for (int i = 0; i < entityList.size(); i++) {
+            T tmp = entityList.get(i);
+            if(tmp.getId() == id){
+                entityList.set(i, t);
+                return true;
+            }
+        }
+        return false;
     }
     default boolean delete(T t){
         List<T> entityList = get();

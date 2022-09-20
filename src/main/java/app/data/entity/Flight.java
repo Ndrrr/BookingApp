@@ -14,7 +14,7 @@ import java.util.Set;
 public class Flight extends Entity implements Serializable, Comparable<Flight> {
     @Serial
     private static final long serialVersionUID = 1L;
-    private static int idCounter = Config.getInstance().getLastFlightID();
+    private static int idCounter = 0;
     private String flightDesignation;
     private Airport airportFrom;
     private Airport airportTo;
@@ -173,7 +173,7 @@ public class Flight extends Entity implements Serializable, Comparable<Flight> {
 
     @Override
     protected int getIdCounter(){
-        Config.getInstance().setLastFlightID(idCounter + 1);
+        //Config.getInstance().setLastFlightID(idCounter + 1);
         return idCounter++;
     }
 

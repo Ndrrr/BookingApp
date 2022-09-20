@@ -46,7 +46,7 @@ public class Context {
         bookingController.saveToDb();
         UserController userController = (UserController) data.get("userController");
         userController.saveToDb();
-        Config.save();
+        // Config.save();
 
     }
     public void loadApp(){
@@ -56,7 +56,7 @@ public class Context {
         bookingController.loadFromDb();
         UserController userController = (UserController) data.get("userController");
         userController.loadFromDb();
-        Config.load();
+        // Config.load();
     }
     private void init(){
         data.put("currentUser", null);

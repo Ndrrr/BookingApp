@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5f8e07b-0d00-4d54-bc7a-d482066041f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/BookingApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/FlightServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/BookingServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/FlightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/MakeBookingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/MakeBookingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MakeBookingMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MakeBookingMenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,39 +57,52 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.app.Main">
-    <configuration name="app.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="BookingApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightServiceTest.testAddFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BookingServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookingApp" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FlightServiceTest" />
-      <option name="METHOD_NAME" value="testAddFlight" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="BookingServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightServiceTest.testRemoveFakeFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FlightServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookingApp" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FlightServiceTest" />
-      <option name="METHOD_NAME" value="testRemoveFakeFlight" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlightServiceTest.testRemoveFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BookingApp" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FlightServiceTest" />
-      <option name="METHOD_NAME" value="testRemoveFlight" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.testUpdateFakeUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserServiceTest" />
+      <option name="METHOD_NAME" value="testUpdateFakeUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -96,10 +110,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.app.Main" />
-        <item itemvalue="JUnit.FlightServiceTest.testRemoveFakeFlight" />
-        <item itemvalue="JUnit.FlightServiceTest.testRemoveFlight" />
-        <item itemvalue="JUnit.FlightServiceTest.testAddFlight" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.FlightServiceTest" />
+        <item itemvalue="JUnit.BookingServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.testUpdateFakeUser" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +142,7 @@
       <workItem from="1663650113200" duration="539000" />
       <workItem from="1663662466467" duration="2179000" />
       <workItem from="1663668417115" duration="20000" />
-      <workItem from="1663690271349" duration="1312000" />
+      <workItem from="1663690271349" duration="7845000" />
     </task>
     <servers />
   </component>
@@ -148,15 +163,33 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItem.java</url>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java</url>
           <line>15</line>
-          <option name="timeStamp" value="7" />
+          <properties class="app.data.dao.Dao" method="add">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/app/data/dao/BookingDao.java</url>
+          <line>29</line>
+          <properties class="app.data.dao.BookingDao" method="load">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/main/java/app/ui/menu/item/MakeBookingMenuItem.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/app/ui/menu/item/CancelBookingMenuItem.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

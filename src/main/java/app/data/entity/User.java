@@ -10,7 +10,7 @@ import java.util.List;
 public class User extends Entity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-    private static int idCounter = Config.getInstance().getLastFlightID();
+    private static int idCounter = 0; // Config.getInstance().getLastFlightID();
     private String username;
     private String password;
     private List<Booking> bookingList;
@@ -68,7 +68,7 @@ public class User extends Entity implements Serializable {
 
     @Override
     protected int getIdCounter() {
-        Config.getInstance().setLastUserID(idCounter + 1);
+        // Config.getInstance().setLastUserID(idCounter + 1);
         return idCounter++;
     }
 }

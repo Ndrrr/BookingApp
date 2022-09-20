@@ -43,6 +43,7 @@ public class BookingService {
 
     public Booking makeBooking(User user, Flight flight, List<Passenger> passengerList){
         Booking booking = new Booking(user, flight, passengerList);
+        user.addBooking(booking);
         addBooking(booking);
         return booking;
     }
@@ -50,5 +51,9 @@ public class BookingService {
         user.removeBooking(booking);
         booking.setUser(null);
         return true;
+    }
+
+    public Optional<Booking> getBookingOfUserById(User user, int id){
+        return user.getBookingList().stream().filter(booking -> booking.getId() == id).findFirst();
     }
 }

@@ -10,7 +10,7 @@ public class Booking extends Entity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private static int idCounter = Config.getInstance().getLastBookingID();
+    private static int idCounter = 0; // Config.getInstance().getLastBookingID();
     private Flight flight;
     private List<Passenger> passengerList;
     private User user;
@@ -76,7 +76,7 @@ public class Booking extends Entity implements Serializable {
 
     @Override
     protected int getIdCounter() {
-        Config.getInstance().setLastBookingID(idCounter + 1);
+        //Config.getInstance().setLastBookingID(idCounter + 1);
         return idCounter++;
     }
 }
