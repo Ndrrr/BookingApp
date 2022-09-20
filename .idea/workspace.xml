@@ -5,51 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5f8e07b-0d00-4d54-bc7a-d482066041f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/LogoutCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/MakeBookingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/command/SearchFlightsCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/AutoSaveMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/CancelBookingMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/LogoutMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MakeBookingMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/SearchFlightsMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/ViewBookingMenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/todo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/BookingApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/FlightServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Context.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Context.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/EmptyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/EmptyCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/LoginCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/LoginCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/command/RegisterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/command/RegisterCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/BookingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/FlightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/FlightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/Db.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/Db.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/dao/BookingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/BookingDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/dao/FlightDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/FlightDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Airport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Airport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/dao/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/Flight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/data/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/BookingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/service/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/console/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/console/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/console/ProdConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/console/ProdConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/console/TestConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/console/TestConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/ExitMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/ExitMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/LoginMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/LoginMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItemStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/RegisterMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/RegisterMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/TimeTableMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/TimeTableMenuItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/util/FlightGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/util/FlightGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/util/InputUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/util/InputUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MakeBookingMenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/ui/menu/item/MakeBookingMenuItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +50,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.app.Main">
     <configuration name="app.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="BookingApp" />
@@ -95,9 +64,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FlightServiceTest.testAddFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FlightServiceTest" />
+      <option name="METHOD_NAME" value="testAddFlight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightServiceTest.testRemoveFakeFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FlightServiceTest" />
+      <option name="METHOD_NAME" value="testRemoveFakeFlight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlightServiceTest.testRemoveFlight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="BookingApp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FlightServiceTest" />
+      <option name="METHOD_NAME" value="testRemoveFlight" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.app.Main" />
+        <item itemvalue="JUnit.FlightServiceTest.testRemoveFakeFlight" />
+        <item itemvalue="JUnit.FlightServiceTest.testRemoveFlight" />
+        <item itemvalue="JUnit.FlightServiceTest.testAddFlight" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +121,13 @@
       <workItem from="1663298474093" duration="12083000" />
       <workItem from="1663412590910" duration="313000" />
       <workItem from="1663434409767" duration="683000" />
-      <workItem from="1663478141012" duration="8362000" />
+      <workItem from="1663478141012" duration="8594000" />
+      <workItem from="1663501502390" duration="674000" />
+      <workItem from="1663568424714" duration="2486000" />
+      <workItem from="1663650113200" duration="539000" />
+      <workItem from="1663662466467" duration="2179000" />
+      <workItem from="1663668417115" duration="20000" />
+      <workItem from="1663690271349" duration="1312000" />
     </task>
     <servers />
   </component>
@@ -144,6 +152,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/app/ui/menu/item/MenuItem.java</url>
           <line>15</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/app/command/CancelBookingCommand.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

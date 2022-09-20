@@ -17,6 +17,9 @@ public class FlightController {
     public void addFlight(Flight flight){
         flightService.addFlight(flight);
     }
+    public void addFlight(List<Flight> flights){
+        flightService.addFlight(flights);
+    }
     public void removeFlight(Flight flight){
         flightService.removeFlight(flight);
     }
@@ -31,7 +34,7 @@ public class FlightController {
     }
     public Optional<Flight> getFlightByDesignation(String designation){
         return getFlights().stream()
-                .filter(flight -> flight.getFlightDesignation().equals(designation))
+                .filter(flight -> flight.getFlightDesignation().equalsIgnoreCase(designation))
                 .findFirst();
     }
     public List<Flight> getFlights(){

@@ -47,9 +47,9 @@ public class MakeBookingMenuItem extends MenuItem {
 
 
             for(int passengerId = 0; passengerId < passengerCount; passengerId++){
-                console.print("Enter passenger name: ");
+                console.print(String.format("Enter passenger %d name: ", passengerId + 1));
                 data.put("pName" + passengerId,console.nextLine());
-                console.print("Enter passenger surname: ");
+                console.print(String.format("Enter passenger %d surname: ", passengerId + 1));
                 data.put("pSurname" + passengerId, console.nextLine());
             }
             console.print("Enter Flight Designation: ");

@@ -31,7 +31,7 @@ public class CancelBookingMenuItem extends MenuItem{
         User user = userController.getUserByUsername((String)context.get("currentUser")).get();
         console.println(console.lineSeparator());
         List<Booking> bookings = user.getBookingList();
-                bookings.forEach(booking -> console.println("\t" + booking.prettyFormat()));
+        bookings.forEach(booking -> console.println(booking.prettyFormat()));
 
         console.print("Enter booking id you want to cancel: ");
         Optional<Integer> id = InputUtil.getCorrectInt(bookingId -> bookings.

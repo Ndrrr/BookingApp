@@ -16,6 +16,9 @@ public class FlightService {
     public void addFlight(Flight flight){
         flightDao.add(flight);
     }
+    public void addFlight(List<Flight> flights){
+        flightDao.addAll(flights);
+    }
     public void removeFlight(Flight flight){
         flightDao.delete(flight);
     }

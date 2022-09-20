@@ -139,8 +139,8 @@ public class Flight extends Entity implements Serializable, Comparable<Flight> {
         passengerList.remove(passenger);
     }
     public String prettyFormat(){
-        return String.format("| %3.3s | %5.5s | %16.16s | %30.30s ----> %30.30s | %20.20s | %3.3s |",
-                getId(), flightDesignation, getFormattedTime(), airportFrom.getLocation(),
+        return String.format("| %5.5s | %16.16s | %30.30s ----> %30.30s | %20.20s | %3.3s |",
+                flightDesignation, getFormattedTime(), airportFrom.getLocation(),
                 airportTo.getLocation(), airline.getName(),  seats);
     }
 

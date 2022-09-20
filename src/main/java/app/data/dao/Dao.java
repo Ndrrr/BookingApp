@@ -1,6 +1,7 @@
 package app.data.dao;
 
 import app.data.entity.Entity;
+import app.data.entity.Flight;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,6 +15,10 @@ public interface Dao<T extends Entity> {
         List<T> entityList = get();
         entityList.add(t);
     }
+    default void addAll(List<T> list){
+        List<T> entityList = get();
+        entityList.addAll(list);
+    }
     default boolean update(int id, T t){
         List<T> entityList = get();
         Entity item = entityList.stream()
@@ -26,12 +31,8 @@ public interface Dao<T extends Entity> {
         return entityList.remove(t);
     }
     default boolean delete(int id){
-        List<T> entityList = get();
-        if(id < 0 || id >= entityList.size()){
-            return false;
-        }
-        entityList.remove(id);
-        return true;
+        Optional<T> optionalEntity = get(id);
+        return optionalEntity.filter(this::delete).isPresent();
 
     }
     default Optional<T> get(int id){

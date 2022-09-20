@@ -57,7 +57,8 @@ public class Booking extends Entity implements Serializable {
         sb.append("\nFlight info:\n");
         sb.append(flight.prettyFormat()).append("\n");
         sb.append("Passenger list:\n");
-        passengerList.forEach(passenger -> sb.append(passenger.getFirstName())
+        passengerList.forEach(passenger -> sb.append("--- ")
+                .append(passenger.getFirstName())
                 .append(" ")
                 .append(passenger.getLastName())
                 .append("\n"));
